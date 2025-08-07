@@ -1,0 +1,33 @@
+
+[
+    {
+        "id": "msg_1",
+        "userId": "admin-astralcore",
+        "displayName": "AstralCore",
+        "text": "Welcome to the AstralCore public chat! Feel free to discuss strategies, ask questions, and connect with the community. Please be respectful.",
+        "timestamp": 1752503011049,
+        "isAdmin": true,
+        "rank": { "name": "Admin", "minBalance": 999999, "Icon": "Shield", "className": "text-primary" },
+        "tier": null
+    },
+    {
+        "id": "msg_2",
+        "userId": "mock-leader-gold",
+        "displayName": "CryptoKing",
+        "avatarUrl": "https://i.pravatar.cc/150?u=cryptoking",
+        "text": "Excited to be here! Let's make some profits today.",
+        "timestamp": 1752503111049,
+        "rank": { "name": "Gold", "minBalance": 5000, "Icon": "GoldRankIcon", "className": "text-amber-500" },
+        "tier": { "id": "tier-4", "name": "VIP CORE IV", "balanceThreshold": 5000, "dailyProfit": 0.055, "clicks": 7, "locked": false }
+    },
+    {
+        "id": "msg_3",
+        "userId": "mock-leader-silver",
+        "displayName": "EtherEve",
+        "avatarUrl": "https://i.pravatar.cc/150?u=ethereve",
+        "text": "Anyone have thoughts on the market today?",
+        "timestamp": 1752503211049,
+        "rank": { "name": "Silver", "minBalance": 1000, "Icon": "SilverRankIcon", "className": "text-slate-400" },
+        "tier": { "id": "tier-3", "name": "VIP CORE III", "balanceThreshold": 1000, "dailyProfit": 0.04, "clicks": 6, "locked": false }
+    }
+]

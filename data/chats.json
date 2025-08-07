@@ -1,0 +1,10 @@
+{
+  "mock-user-123": [
+    {
+      "id": "msg_1",
+      "text": "Welcome to support! This is a mock chat system. Messages will not be saved.",
+      "timestamp": 1752503011049,
+      "sender": "admin"
+    }
+  ]
+}

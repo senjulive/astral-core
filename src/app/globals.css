@@ -1,0 +1,390 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark Theme - Welcome Page Style */
+    --background: 220 71% 4%; /* Deep slate-blue like welcome page */
+    --foreground: 210 40% 98%;
+
+    --card: 220 47% 8%; /* Darker slate-blue for cards */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 71% 4%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 213 94% 68%; /* Vibrant blue from welcome page */
+    --primary-foreground: 220 47% 8%;
+
+    --secondary: 220 33% 12%; /* Muted blue-slate */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 33% 12%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 220 33% 15%; /* Slightly lighter for accent */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 33% 20%; /* More visible borders */
+    --input: 220 33% 12%;
+    --ring: 213 94% 68%; /* Blue ring to match primary */
+
+    --chart-1: 213 94% 68%; /* Vibrant blue */
+    --chart-2: 270 95% 75%; /* Purple */
+    --chart-3: 180 98% 60%; /* Cyan */
+    --chart-4: 43 74% 66%; /* Gold accent */
+    --chart-5: 120 60% 50%; /* Green accent */
+    --radius: 0.75rem;
+
+    /* Custom Sidebar Vars - Welcome Page Style */
+    --sidebar-background: 220 71% 4%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 220 47% 8%;
+    --sidebar-accent: 220 33% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 33% 15%;
+    --sidebar-ring: 213 94% 68%;
+
+    /* Chart Colors for Ranks - Welcome Page Palette */
+    --color-recruit: 220 20% 50%;
+    --color-bronze: 24 75% 50%;
+    --color-silver: 240 10% 80%;
+    --color-gold: 47.9 95.8% 53.1%;
+    --color-platinum: 213 94% 68%;
+    --color-diamond: 270 95% 75%;
+  }
+
+  /* Light Theme */
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 213 94% 68%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 213 94% 68%;
+
+    /* Light Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 222.2 84% 4.9%;
+    --sidebar-primary: 222.2 84% 4.9%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222.2 84% 4.9%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 213 94% 68%;
+  }
+
+  /* Purple Theme - Welcome Page Style */
+  .purple {
+    --background: 220 71% 4%; /* Deep slate-blue similar to welcome page */
+    --foreground: 210 40% 98%;
+
+    --card: 220 47% 8%; /* Slightly lighter slate-blue for cards */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 71% 4%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 213 94% 68%; /* Vibrant blue like welcome page primary */
+    --primary-foreground: 220 47% 8%;
+
+    --secondary: 220 33% 12%; /* Muted blue-slate */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 33% 12%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 220 33% 15%; /* Slightly lighter for accent */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 33% 20%; /* More visible borders */
+    --input: 220 33% 12%;
+    --ring: 213 94% 68%; /* Blue ring to match primary */
+
+    /* Purple Sidebar - Welcome Page Style */
+    --sidebar-background: 220 71% 4%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 220 47% 8%;
+    --sidebar-accent: 220 33% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 33% 15%;
+    --sidebar-ring: 213 94% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-image: radial-gradient(circle at 1px 1px, hsl(var(--border)) 1px, transparent 0);
+    background-size: 2rem 2rem;
+  }
+}
+
+@layer utilities {
+  @keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+}
+
+@layer components {
+    .trading-card {
+        @apply bg-slate-800/80 rounded-2xl p-7 shadow-2xl backdrop-blur-2xl max-w-7xl w-full border border-blue-500/20;
+    }
+    .header {
+        @apply flex justify-between items-center mb-7 pb-5 border-b border-white/10;
+    }
+    .logo {
+        @apply text-3xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent flex items-center gap-3 tracking-tight;
+    }
+    .logo::before {
+        content: "📊";
+        @apply text-3xl;
+    }
+    .bot-status {
+        @apply flex items-center gap-2.5 py-2.5 px-5 rounded-full cursor-pointer transition-all duration-300 font-semibold;
+    }
+    .status-indicator {
+        @apply w-2.5 h-2.5 rounded-full animate-pulse;
+    }
+    .controls {
+        @apply flex justify-between mb-6 gap-6 items-center;
+    }
+    .pair-selector {
+        @apply flex gap-3;
+    }
+    .pair-btn {
+        @apply bg-slate-700/80 border border-white/10 text-slate-200 py-3 px-5 rounded-xl cursor-pointer transition-all duration-300 text-sm font-semibold relative overflow-hidden;
+    }
+    .pair-btn:hover {
+        @apply bg-blue-500/20 border-blue-500/50 -translate-y-0.5;
+    }
+    .pair-btn.active {
+        @apply bg-gradient-to-r from-blue-500 to-blue-700 border-blue-500 shadow-[0_8px_25px_rgba(59,130,246,0.3)];
+    }
+    .timeframe-selector {
+        @apply flex gap-1.5 bg-slate-900/80 p-1.5 rounded-xl border border-white/10;
+    }
+    .timeframe-btn {
+        @apply bg-transparent border-none text-slate-400 py-2 px-4 rounded-lg text-xs cursor-pointer transition-all duration-300 font-medium;
+    }
+    .timeframe-btn:hover {
+        @apply bg-blue-500/20 text-slate-200;
+    }
+    .timeframe-btn.active {
+        @apply bg-gradient-to-r from-blue-500 to-blue-700 text-white shadow-[0_4px_12px_rgba(59,130,246,0.3)];
+    }
+    .content-grid {
+        @apply grid grid-cols-1 lg:grid-cols-[1fr,320px] gap-6 mb-6;
+    }
+    .chart-section {
+        @apply bg-slate-900/80 rounded-2xl p-5 border border-white/10 relative;
+    }
+    .chart-tabs {
+        @apply flex gap-3;
+    }
+    .chart-tab {
+        @apply bg-slate-700/60 border-none text-slate-400 py-2 px-4 rounded-lg text-xs cursor-pointer transition-all duration-300 font-medium;
+    }
+    .chart-tab.active {
+        @apply bg-blue-500/20 text-blue-500 border border-blue-500/30;
+    }
+    .chart-container {
+        @apply h-96 relative bg-black/40 rounded-xl border border-white/5 overflow-hidden mb-4;
+    }
+    .price-display {
+        @apply flex justify-between items-center py-4 border-t border-white/10;
+    }
+    .price-info {
+        @apply flex items-center gap-4;
+    }
+    .price-value {
+        @apply text-2xl font-bold text-amber-400 [text-shadow:0_0_20px_rgba(251,191,36,0.4)] tracking-tight;
+    }
+    .price-change {
+        @apply font-semibold py-1.5 px-3 rounded-lg text-sm;
+    }
+    .price-change.positive {
+        @apply text-emerald-500 bg-emerald-500/10 border border-emerald-500/30;
+    }
+    .price-change.negative {
+        @apply text-red-500 bg-red-500/10 border border-red-500/30;
+    }
+    .volume-info {
+        @apply text-slate-400 text-sm;
+    }
+    .stats-section {
+        @apply flex flex-col gap-5;
+    }
+    .stats-grid {
+        @apply grid grid-cols-2 gap-4;
+    }
+    .stat-card {
+        @apply bg-gradient-to-br from-slate-700/80 to-slate-700/40 border border-white/10 rounded-xl p-4 transition-all duration-300 relative overflow-hidden;
+    }
+    .stat-card:hover {
+        @apply bg-gradient-to-br from-blue-500/10 to-slate-700/60 -translate-y-1 shadow-2xl;
+    }
+    .stat-label {
+        @apply text-xs text-slate-400 mb-1.5 uppercase font-semibold tracking-wider;
+    }
+    .stat-value {
+        @apply text-lg font-bold tracking-tight;
+    }
+    .profit {
+        @apply text-emerald-400 [text-shadow:0_0_12px_rgba(16,185,129,0.4)];
+    }
+    .loss {
+        @apply text-red-400 [text-shadow:0_0_12px_rgba(239,68,68,0.4)];
+    }
+    .section-header {
+        @apply text-sm text-slate-400 mb-3 uppercase font-bold tracking-wider border-b border-white/10 pb-2;
+    }
+    .performance-section {
+        @apply bg-gradient-to-br from-slate-900/90 to-slate-800/60 rounded-2xl p-5 border border-white/10;
+    }
+    .performance-grid {
+        @apply grid grid-cols-2 gap-4;
+    }
+    .performance-item {
+        @apply flex flex-col gap-1 p-3 bg-slate-700/40 rounded-lg border border-white/5 transition-all duration-300;
+    }
+    .performance-item:hover {
+        @apply bg-blue-500/10 border-blue-500/30;
+    }
+    .performance-label {
+        @apply text-xs text-slate-400 uppercase font-semibold tracking-wider;
+    }
+    .performance-value {
+        @apply text-base font-bold tracking-tight;
+    }
+    .bottom-stats {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+    }
+    .order-history {
+        @apply bg-gradient-to-br from-slate-900/90 to-slate-800/60 rounded-2xl p-5 border border-white/10;
+    }
+    .order-list {
+        @apply max-h-52 overflow-y-auto mt-4;
+    }
+    .order-item {
+        @apply flex justify-between items-center py-3 border-b border-white/5 text-sm transition-all duration-300;
+    }
+    .order-item:hover {
+        @apply bg-gradient-to-r from-blue-500/10 to-transparent rounded-md px-3;
+    }
+    .order-buy {
+        @apply text-emerald-400 font-bold [text-shadow:0_0_8px_rgba(16,185,129,0.3)];
+    }
+    .order-sell {
+        @apply text-red-400 font-bold [text-shadow:0_0_8px_rgba(239,68,68,0.3)];
+    }
+    .order-time {
+        @apply text-slate-500 text-xs;
+    }
+    .candle { @apply absolute; }
+    .candle-wick { @apply absolute w-px left-1/2 -translate-x-1/2 bg-slate-500; }
+    .candle-body { @apply absolute left-1/2 -translate-x-1/2 rounded-sm min-h-[2px] transition-all duration-200; }
+    .candle:hover .candle-body { @apply shadow-[0_0_10px_rgba(255,255,255,0.3)] scale-110; }
+    .bullish { @apply bg-gradient-to-b from-emerald-500 to-emerald-700 border border-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.3)]; }
+    .bearish { @apply bg-gradient-to-b from-red-500 to-red-700 border border-red-500 shadow-[0_0_8px_rgba(239,68,68,0.3)]; }
+    .grid-line { @apply absolute left-0 right-0 border-t border-dashed border-slate-700/50; }
+    .price-line { @apply absolute left-0 right-0 border-t border-blue-500 z-10; }
+    .price-line::after {
+        content: attr(data-price);
+        @apply absolute right-2 -top-2.5 bg-blue-500 text-white py-0.5 px-2 rounded text-xs font-bold shadow-[0_2px_8px_rgba(59,130,246,0.4)];
+    }
+    .profit-float { @apply absolute text-emerald-400 font-bold text-sm animate-floatUp pointer-events-none z-30 [text-shadow:0_0_12px_rgba(16,185,129,0.8)]; }
+    .loss-float { @apply absolute text-red-400 font-bold text-sm animate-floatUp pointer-events-none z-30 [text-shadow:0_0_12px_rgba(239,68,68,0.8)]; }
+
+    .trading-container * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .trading-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        font-family: 'Courier New', monospace;
+        color: #ffffff;
+        overflow: hidden;
+        border-radius: var(--radius);
+    }
+    .transaction {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        animation: transactionPop 1s ease-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @keyframes transactionPop {
+        0% { transform: scale(0); opacity: 1; }
+        50% { transform: scale(1.5); opacity: 0.8; }
+        100% { transform: scale(0); opacity: 0; }
+    }
+    
+    .grid-levels {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+   
+    .dynamic-status {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0,0,0,0.5);
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 12px;
+        animation: fadeInOut 5s;
+    }
+    @keyframes fadeInOut {
+        0%, 100% { opacity: 0; }
+        20%, 80% { opacity: 1; }
+    }
+}

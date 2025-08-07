@@ -1,0 +1,38 @@
+[
+  {
+    "id": "usr_sample_001",
+    "email": "demo@astralcore.com",
+    "password": "$2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LeWAJ5YaRaOLDtKPO",
+    "fullName": "Demo User",
+    "phoneNumber": "+1234567890",
+    "country": "United States",
+    "isVerified": true,
+    "createdAt": "2024-01-15T12:00:00.000Z",
+    "tier": "silver",
+    "balance": 1500.50,
+    "totalDeposits": 2000.00,
+    "totalWithdrawals": 500.00,
+    "totalProfits": 250.25,
+    "isActive": true,
+    "lastLogin": "2024-01-15T14:30:00.000Z",
+    "role": "user"
+  },
+  {
+    "id": "usr_sample_002",
+    "email": "trader@astralcore.com",
+    "password": "$2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LeWAJ5YaRaOLDtKPO",
+    "fullName": "Pro Trader",
+    "phoneNumber": "+1987654321",
+    "country": "Canada",
+    "isVerified": true,
+    "createdAt": "2024-01-10T10:00:00.000Z",
+    "tier": "platinum",
+    "balance": 15750.75,
+    "totalDeposits": 20000.00,
+    "totalWithdrawals": 5000.00,
+    "totalProfits": 2500.50,
+    "isActive": true,
+    "lastLogin": "2024-01-15T15:45:00.000Z",
+    "role": "user"
+  }
+]

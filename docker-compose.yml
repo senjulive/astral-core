@@ -1,0 +1,103 @@
+version: '3.8'
+
+services:
+  # Main application
+  astralcore:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_APP_URL=http://localhost:3000
+      - NEXT_PUBLIC_APP_NAME=AstralCore Hyperdrive
+      - NEXT_PUBLIC_APP_VERSION=5.0.0
+      - JWT_SECRET=development-jwt-secret-minimum-32-characters-long
+      - NEXTAUTH_SECRET=development-nextauth-secret-minimum-32-characters
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+    networks:
+      - astralcore-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Redis for caching and sessions (optional)
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    networks:
+      - astralcore-network
+    command: redis-server --appendonly yes --requirepass astralcore123
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # PostgreSQL database (optional)
+  postgres:
+    image: postgres:15-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=astralcore
+      - POSTGRES_USER=astralcore
+      - POSTGRES_PASSWORD=astralcore123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init-db.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: unless-stopped
+    networks:
+      - astralcore-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U astralcore"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Nginx reverse proxy (optional)
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl:/etc/ssl/certs
+    depends_on:
+      - astralcore
+    restart: unless-stopped
+    networks:
+      - astralcore-network
+
+  # Monitoring with Grafana (optional)
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin123
+    volumes:
+      - grafana_data:/var/lib/grafana
+    restart: unless-stopped
+    networks:
+      - astralcore-network
+
+volumes:
+  redis_data:
+  postgres_data:
+  grafana_data:
+
+networks:
+  astralcore-network:
+    driver: bridge

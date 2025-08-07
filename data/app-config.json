@@ -1,0 +1,79 @@
+{
+  "app": {
+    "name": "AstralCore",
+    "version": "5.0",
+    "description": "Hyperdrive Trading Platform",
+    "url": "https://astralcore-hyperdrive.netlify.app",
+    "supportEmail": "support@astralcore.com",
+    "maintenanceMode": false
+  },
+  "features": {
+    "trading": true,
+    "deposits": true,
+    "withdrawals": true,
+    "chat": true,
+    "squadSystem": true,
+    "admin": true,
+    "moderator": true,
+    "analytics": true
+  },
+  "limits": {
+    "maxUsersPerSquad": 50,
+    "minDepositAmount": 10,
+    "maxDepositAmount": 100000,
+    "minWithdrawalAmount": 5,
+    "maxWithdrawalAmount": 50000,
+    "dailyWithdrawalLimit": 10000
+  },
+  "tiers": {
+    "recruit": {
+      "name": "Recruit",
+      "minBalance": 0,
+      "maxBalance": 99,
+      "features": ["basic_trading", "public_chat"],
+      "withdrawalFee": 0.05
+    },
+    "bronze": {
+      "name": "Bronze",
+      "minBalance": 100,
+      "maxBalance": 499,
+      "features": ["basic_trading", "public_chat", "squad_system"],
+      "withdrawalFee": 0.04
+    },
+    "silver": {
+      "name": "Silver",
+      "minBalance": 500,
+      "maxBalance": 1999,
+      "features": ["advanced_trading", "public_chat", "squad_system", "priority_support"],
+      "withdrawalFee": 0.03
+    },
+    "gold": {
+      "name": "Gold",
+      "minBalance": 2000,
+      "maxBalance": 9999,
+      "features": ["advanced_trading", "public_chat", "squad_system", "priority_support", "analytics"],
+      "withdrawalFee": 0.02
+    },
+    "platinum": {
+      "name": "Platinum",
+      "minBalance": 10000,
+      "maxBalance": 49999,
+      "features": ["pro_trading", "public_chat", "squad_system", "priority_support", "analytics", "custom_strategies"],
+      "withdrawalFee": 0.01
+    },
+    "diamond": {
+      "name": "Diamond",
+      "minBalance": 50000,
+      "maxBalance": null,
+      "features": ["pro_trading", "public_chat", "squad_system", "vip_support", "analytics", "custom_strategies", "api_access"],
+      "withdrawalFee": 0.005
+    }
+  },
+  "trading": {
+    "supportedCurrencies": ["USDT", "BTC", "ETH"],
+    "defaultCurrency": "USDT",
+    "minTradeAmount": 1,
+    "maxTradeAmount": 100000,
+    "tradingFee": 0.001
+  }
+}

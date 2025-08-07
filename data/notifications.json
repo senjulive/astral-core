@@ -1,0 +1,28 @@
+{
+  "mock-user-123": [
+    {
+      "title": "Scheduled Maintenance on July 20th",
+      "content": "The platform will undergo scheduled maintenance on July 20th from 02:00 to 04:00 UTC. The AI Growth Engine may be temporarily unavailable during this period. Thank you for your understanding.",
+      "id": "default-announcement-2",
+      "date": 1752364800000,
+      "read": true,
+      "href": "/dashboard/profile"
+    },
+    {
+      "title": "Security Update: Withdrawal Addresses",
+      "content": "For your security, once a withdrawal address is saved, it cannot be changed directly. Please contact support if you need to update your address. This measure helps protect your assets from unauthorized access.",
+      "id": "default-announcement-1",
+      "date": 1752278400000,
+      "read": true,
+      "href": "/dashboard/profile"
+    },
+    {
+      "title": "🎉 Welcome to the New AstralCore Platform!",
+      "content": "We are thrilled to launch our redesigned platform. Explore the new features, including the Squad System and AI Growth Engine. We appreciate your feedback!",
+      "id": "default-announcement-0",
+      "date": 1752192000000,
+      "read": true,
+      "href": "/dashboard/profile"
+    }
+  ]
+}

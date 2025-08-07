@@ -1,0 +1,44 @@
+
+{
+  "mock-user-123": {
+    "addresses": {
+      "usdt": "TgBkSNsxjUYOReLooneDs30nQoKUqpAMB1"
+    },
+    "balances": {
+      "usdt": 0,
+      "btc": 0,
+      "eth": 0
+    },
+    "pending_withdrawals": [],
+    "growth": {
+      "clicksLeft": 4,
+      "lastReset": 1752503271062,
+      "dailyEarnings": 0,
+      "earningsHistory": []
+    },
+    "squad": {
+      "referralCode": "XYS0AR6R",
+      "members": [
+        "mock-member-1",
+        "mock-member-2"
+      ]
+    },
+    "profile": {
+      "username": "DefaultUser",
+      "fullName": "Default User",
+      "idCardNo": "000000000",
+      "contactNumber": "+0000000000",
+      "country": "Default",
+      "avatarUrl": "",
+      "verificationStatus": "unverified"
+    },
+    "security": {
+      "withdrawalAddresses": {}
+    },
+    "claimed_achievements": {
+        "ranks": [],
+        "tiers": []
+    },
+    "claimed_referrals": []
+  }
+}

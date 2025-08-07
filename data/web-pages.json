@@ -1,0 +1,526 @@
+[
+  {
+    "id": "welcome",
+    "name": "Welcome Page",
+    "route": "/",
+    "title": "AstralCore - Hyperdrive Trading Platform",
+    "description": "Main landing page with hero section and features",
+    "lastModified": "2024-01-15T12:00:00.000Z",
+    "status": "published",
+    "content": [
+      {
+        "id": "hero-title",
+        "pageId": "welcome",
+        "section": "hero",
+        "type": "text",
+        "content": "AstralCore",
+        "metadata": {
+          "className": "text-6xl sm:text-8xl lg:text-9xl font-black bg-gradient-to-r from-indigo-400 via-purple-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent"
+        }
+      },
+      {
+        "id": "hero-subtitle",
+        "pageId": "welcome",
+        "section": "hero",
+        "type": "text",
+        "content": "Hyperdrive v5.0",
+        "metadata": {
+          "className": "text-xl sm:text-2xl text-indigo-300 font-medium tracking-[0.3em] uppercase"
+        }
+      },
+      {
+        "id": "hero-description",
+        "pageId": "welcome",
+        "section": "hero",
+        "type": "text",
+        "content": "Experience the next evolution in trading technology. Our Hyperdrive processes infinite market possibilities to generate autonomous wealth through advanced neural algorithms.",
+        "metadata": {
+          "className": "text-xl sm:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed"
+        }
+      },
+      {
+        "id": "hero-action-button",
+        "pageId": "welcome",
+        "section": "hero",
+        "type": "button",
+        "content": "Launch Hyperdrive",
+        "metadata": {
+          "className": "bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 text-white px-12 py-4 rounded-xl font-bold text-xl hover:scale-105 transition-all duration-300",
+          "href": "/register"
+        }
+      },
+      {
+        "id": "ai-section-title",
+        "pageId": "welcome",
+        "section": "ai-showcase",
+        "type": "text",
+        "content": "Meet Your Hyperdrive AI",
+        "metadata": {
+          "className": "text-4xl sm:text-6xl lg:text-7xl font-bold text-white"
+        }
+      },
+      {
+        "id": "ai-section-description",
+        "pageId": "welcome",
+        "section": "ai-showcase",
+        "type": "text",
+        "content": "Powered by revolutionary Hyperdrive algorithms that analyze infinite market dimensions and execute profitable trades across multiple realities simultaneously.",
+        "metadata": {
+          "className": "text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+        }
+      },
+      {
+        "id": "performance-title",
+        "pageId": "welcome",
+        "section": "performance",
+        "type": "text",
+        "content": "Hyperdrive Performance Statistics",
+        "metadata": {
+          "className": "text-4xl sm:text-5xl font-bold text-white"
+        }
+      },
+      {
+        "id": "neural-core-image",
+        "pageId": "welcome",
+        "section": "ai-showcase",
+        "type": "image",
+        "content": "https://cdn.builder.io/api/v1/image/assets%2F4b279aceeead46d4bb4166202e68dc54%2Faa19381a004d49dabf38b45dce30fd13?format=webp&width=800",
+        "metadata": {
+          "alt": "Hyperdrive Neural Core",
+          "className": "w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+        }
+      },
+      {
+        "id": "hyperdrive-image",
+        "pageId": "welcome",
+        "section": "ai-showcase",
+        "type": "image",
+        "content": "https://cdn.builder.io/api/v1/image/assets%2F4b279aceeead46d4bb4166202e68dc54%2Fe6907f8837fa4ec59f563ce0222ba35c?format=webp&width=800",
+        "metadata": {
+          "alt": "Hyperdrive Engine",
+          "className": "w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+        }
+      },
+      {
+        "id": "security-matrix-image",
+        "pageId": "welcome",
+        "section": "ai-showcase",
+        "type": "image",
+        "content": "https://cdn.builder.io/api/v1/image/assets%2F4b279aceeead46d4bb4166202e68dc54%2F52f48e5632374229b8d5254907e7dc34?format=webp&width=800",
+        "metadata": {
+          "alt": "Hyperdrive Security Matrix",
+          "className": "w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+        }
+      },
+      {
+        "id": "features-title",
+        "pageId": "welcome",
+        "section": "features",
+        "type": "text",
+        "content": "Revolutionary Features",
+        "metadata": {
+          "className": "text-4xl sm:text-5xl font-bold text-white text-center"
+        }
+      },
+      {
+        "id": "features-subtitle",
+        "pageId": "welcome",
+        "section": "features",
+        "type": "text",
+        "content": "Advanced Hyperdrive-powered trading capabilities",
+        "metadata": {
+          "className": "text-xl text-gray-300 text-center max-w-2xl mx-auto"
+        }
+      }
+    ]
+  },
+  {
+    "id": "login",
+    "name": "Login Page",
+    "route": "/login",
+    "title": "Login - AstralCore",
+    "description": "User authentication page",
+    "lastModified": "2024-01-15T12:00:00.000Z",
+    "status": "published",
+    "content": [
+      {
+        "id": "login-title",
+        "pageId": "login",
+        "section": "hero",
+        "type": "text",
+        "content": "Welcome Back to AstralCore",
+        "metadata": {
+          "className": "text-3xl sm:text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
+        }
+      },
+      {
+        "id": "login-subtitle",
+        "pageId": "login",
+        "section": "hero",
+        "type": "text",
+        "content": "Access Your Hyperdrive Trading Intelligence",
+        "metadata": {
+          "className": "text-lg text-gray-300 font-light tracking-wide"
+        }
+      },
+      {
+        "id": "login-form-title",
+        "pageId": "login",
+        "section": "form",
+        "type": "text",
+        "content": "Login to Your Account",
+        "metadata": {
+          "className": "text-2xl font-bold text-white text-center"
+        }
+      },
+      {
+        "id": "login-email-label",
+        "pageId": "login",
+        "section": "form",
+        "type": "text",
+        "content": "Email Address",
+        "metadata": {
+          "className": "text-sm font-medium text-gray-300"
+        }
+      },
+      {
+        "id": "login-password-label",
+        "pageId": "login",
+        "section": "form",
+        "type": "text",
+        "content": "Password",
+        "metadata": {
+          "className": "text-sm font-medium text-gray-300"
+        }
+      },
+      {
+        "id": "login-button",
+        "pageId": "login",
+        "section": "form",
+        "type": "button",
+        "content": "Login to Hyperdrive",
+        "metadata": {
+          "className": "w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300"
+        }
+      },
+      {
+        "id": "forgot-password-link",
+        "pageId": "login",
+        "section": "form",
+        "type": "link",
+        "content": "Forgot your password?",
+        "metadata": {
+          "className": "text-purple-400 hover:text-purple-300 text-sm transition-colors",
+          "href": "/forgot-password"
+        }
+      },
+      {
+        "id": "register-link",
+        "pageId": "login",
+        "section": "form",
+        "type": "link",
+        "content": "Don't have an account? Register here",
+        "metadata": {
+          "className": "text-cyan-400 hover:text-cyan-300 text-sm transition-colors",
+          "href": "/register"
+        }
+      }
+    ]
+  },
+  {
+    "id": "register",
+    "name": "Register Page",
+    "route": "/register",
+    "title": "Register - AstralCore",
+    "description": "User registration page",
+    "lastModified": "2024-01-15T12:00:00.000Z",
+    "status": "published",
+    "content": [
+      {
+        "id": "register-title",
+        "pageId": "register",
+        "section": "hero",
+        "type": "text",
+        "content": "Join AstralCore Hyperdrive",
+        "metadata": {
+          "className": "text-3xl sm:text-5xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent"
+        }
+      },
+      {
+        "id": "register-subtitle",
+        "pageId": "register",
+        "section": "hero",
+        "type": "text",
+        "content": "Begin Your Hyperdrive Trading Journey",
+        "metadata": {
+          "className": "text-lg text-gray-300 font-light tracking-wide"
+        }
+      },
+      {
+        "id": "register-form-title",
+        "pageId": "register",
+        "section": "form",
+        "type": "text",
+        "content": "Create Your Account",
+        "metadata": {
+          "className": "text-2xl font-bold text-white text-center"
+        }
+      },
+      {
+        "id": "register-email-label",
+        "pageId": "register",
+        "section": "form",
+        "type": "text",
+        "content": "Email Address",
+        "metadata": {
+          "className": "text-sm font-medium text-gray-300"
+        }
+      },
+      {
+        "id": "register-password-label",
+        "pageId": "register",
+        "section": "form",
+        "type": "text",
+        "content": "Password",
+        "metadata": {
+          "className": "text-sm font-medium text-gray-300"
+        }
+      },
+      {
+        "id": "register-confirm-password-label",
+        "pageId": "register",
+        "section": "form",
+        "type": "text",
+        "content": "Confirm Password",
+        "metadata": {
+          "className": "text-sm font-medium text-gray-300"
+        }
+      },
+      {
+        "id": "register-button",
+        "pageId": "register",
+        "section": "form",
+        "type": "button",
+        "content": "Create Account",
+        "metadata": {
+          "className": "w-full bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-600 hover:to-cyan-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300"
+        }
+      },
+      {
+        "id": "login-link",
+        "pageId": "register",
+        "section": "form",
+        "type": "link",
+        "content": "Already have an account? Login here",
+        "metadata": {
+          "className": "text-cyan-400 hover:text-cyan-300 text-sm transition-colors",
+          "href": "/login"
+        }
+      },
+      {
+        "id": "terms-text",
+        "pageId": "register",
+        "section": "form",
+        "type": "text",
+        "content": "By creating an account, you agree to our Terms of Service and Privacy Policy",
+        "metadata": {
+          "className": "text-xs text-gray-400 text-center"
+        }
+      }
+    ]
+  },
+  {
+    "id": "forgot-password",
+    "name": "Forgot Password Page",
+    "route": "/forgot-password",
+    "title": "Password Recovery - AstralCore",
+    "description": "Password recovery page",
+    "lastModified": "2024-01-15T12:00:00.000Z",
+    "status": "published",
+    "content": [
+      {
+        "id": "forgot-title",
+        "pageId": "forgot-password",
+        "section": "hero",
+        "type": "text",
+        "content": "Hyperdrive Password Recovery",
+        "metadata": {
+          "className": "text-3xl sm:text-5xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent"
+        }
+      },
+      {
+        "id": "forgot-subtitle",
+        "pageId": "forgot-password",
+        "section": "hero",
+        "type": "text",
+        "content": "Secure Account Recovery Protocol",
+        "metadata": {
+          "className": "text-lg text-gray-300 font-light tracking-wide"
+        }
+      },
+      {
+        "id": "forgot-form-title",
+        "pageId": "forgot-password",
+        "section": "form",
+        "type": "text",
+        "content": "Reset Your Password",
+        "metadata": {
+          "className": "text-2xl font-bold text-white text-center"
+        }
+      },
+      {
+        "id": "forgot-description",
+        "pageId": "forgot-password",
+        "section": "form",
+        "type": "text",
+        "content": "Enter your email address and we'll send you a link to reset your password.",
+        "metadata": {
+          "className": "text-gray-300 text-center"
+        }
+      },
+      {
+        "id": "forgot-email-label",
+        "pageId": "forgot-password",
+        "section": "form",
+        "type": "text",
+        "content": "Email Address",
+        "metadata": {
+          "className": "text-sm font-medium text-gray-300"
+        }
+      },
+      {
+        "id": "forgot-button",
+        "pageId": "forgot-password",
+        "section": "form",
+        "type": "button",
+        "content": "Send Recovery Link",
+        "metadata": {
+          "className": "w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300"
+        }
+      },
+      {
+        "id": "back-to-login-link",
+        "pageId": "forgot-password",
+        "section": "form",
+        "type": "link",
+        "content": "Back to Login",
+        "metadata": {
+          "className": "text-cyan-400 hover:text-cyan-300 text-sm transition-colors",
+          "href": "/login"
+        }
+      }
+    ]
+  },
+  {
+    "id": "dashboard",
+    "name": "Dashboard Page",
+    "route": "/dashboard",
+    "title": "Dashboard - AstralCore",
+    "description": "Main dashboard for authenticated users",
+    "lastModified": "2024-01-15T12:00:00.000Z",
+    "status": "published",
+    "content": [
+      {
+        "id": "dashboard-title",
+        "pageId": "dashboard",
+        "section": "header",
+        "type": "text",
+        "content": "Hyperdrive Trading Dashboard",
+        "metadata": {
+          "className": "text-4xl font-bold text-white"
+        }
+      },
+      {
+        "id": "dashboard-subtitle",
+        "pageId": "dashboard",
+        "section": "header",
+        "type": "text",
+        "content": "Your Hyperdrive Control Center",
+        "metadata": {
+          "className": "text-xl text-gray-300"
+        }
+      },
+      {
+        "id": "balance-card-title",
+        "pageId": "dashboard",
+        "section": "stats",
+        "type": "text",
+        "content": "Total Balance",
+        "metadata": {
+          "className": "text-lg font-semibold text-white"
+        }
+      },
+      {
+        "id": "profit-card-title",
+        "pageId": "dashboard",
+        "section": "stats",
+        "type": "text",
+        "content": "24h Profit",
+        "metadata": {
+          "className": "text-lg font-semibold text-white"
+        }
+      },
+      {
+        "id": "trades-card-title",
+        "pageId": "dashboard",
+        "section": "stats",
+        "type": "text",
+        "content": "Active Trades",
+        "metadata": {
+          "className": "text-lg font-semibold text-white"
+        }
+      }
+    ]
+  },
+  {
+    "id": "about",
+    "name": "About Page",
+    "route": "/about",
+    "title": "About - AstralCore",
+    "description": "Information about AstralCore platform",
+    "lastModified": "2024-01-15T12:00:00.000Z",
+    "status": "draft",
+    "content": [
+      {
+        "id": "about-title",
+        "pageId": "about",
+        "section": "hero",
+        "type": "text",
+        "content": "About AstralCore",
+        "metadata": {
+          "className": "text-4xl sm:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
+        }
+      },
+      {
+        "id": "about-description",
+        "pageId": "about",
+        "section": "hero",
+        "type": "text",
+        "content": "AstralCore represents the pinnacle of Hyperdrive trading technology, combining advanced artificial intelligence with revolutionary blockchain protocols to create the most sophisticated trading platform ever conceived.",
+        "metadata": {
+          "className": "text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+        }
+      },
+      {
+        "id": "mission-title",
+        "pageId": "about",
+        "section": "mission",
+        "type": "text",
+        "content": "Our Mission",
+        "metadata": {
+          "className": "text-3xl font-bold text-white"
+        }
+      },
+      {
+        "id": "mission-text",
+        "pageId": "about",
+        "section": "mission",
+        "type": "text",
+        "content": "To democratize access to Hyperdrive-powered trading technologies and empower individuals to achieve financial freedom through advanced automation and artificial intelligence.",
+        "metadata": {
+          "className": "text-lg text-gray-300 leading-relaxed"
+        }
+      }
+    ]
+  }
+]
