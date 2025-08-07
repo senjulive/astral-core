@@ -22,7 +22,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { useToast } from "@/hooks/use-toast";
+import { useToast, type ToastFn } from "@/hooks/use-toast";
 import { clientLogin as login } from "@/lib/auth-client";
 
 const moderatorLoginSchema = z.object({
@@ -35,7 +35,7 @@ type ModeratorLoginFormValues = z.infer<typeof moderatorLoginSchema>;
 const MOCK_MODERATOR_EMAIL = "moderator@astralcore.io";
 
 export function ModeratorLoginForm({ onLoginSuccess }: { onLoginSuccess: (email: string) => void }) {
-  const { toast } = useToast();
+  const { toast }: { toast: ToastFn } = useToast();
   const [isLoading, setIsLoading] = React.useState(false);
 
   const form = useForm<ModeratorLoginFormValues>({

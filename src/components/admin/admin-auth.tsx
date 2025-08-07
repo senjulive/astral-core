@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/card";
 import { AdminProvider } from "@/contexts/AdminContext";
 import { AdminLoginForm } from "./admin-login-form";
-import { UserProvider } from "@/contexts/UserContext";
 
 export function AdminAuth({ children }: { children: React.ReactNode }) {
   const [authStatus, setAuthStatus] = React.useState<"loading" | "authed" | "unauthed">("loading");
@@ -51,9 +50,7 @@ export function AdminAuth({ children }: { children: React.ReactNode }) {
 
   if (authStatus === "authed") {
     return (
-      <UserProvider value={{ user }}>
-        <AdminProvider>{children}</AdminProvider>
-      </UserProvider>
+      <AdminProvider>{children}</AdminProvider>
     );
   }
 

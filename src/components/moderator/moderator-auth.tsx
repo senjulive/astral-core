@@ -50,7 +50,7 @@ export function ModeratorAuth({ children }: { children: React.ReactNode }) {
   if (authStatus === "authed") {
     // For the mock app, moderators have all permissions
     return (
-      <UserProvider value={{ user }}>
+      <UserProvider value={{ user, wallet: null, rank: null, tier: null, tierSettings: [] }}>
         <ModeratorProvider permissions={{ customer_support: true, user_verification: true, deposit_approval: true }}>
           {children}
         </ModeratorProvider>

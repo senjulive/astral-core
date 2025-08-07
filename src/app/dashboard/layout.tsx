@@ -11,6 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+
 import {
   SidebarProvider,
   Sidebar,
@@ -19,12 +20,7 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
-  SidebarFooter,
-  SidebarTrigger,
-  SidebarInset,
-}
-from '@/components/ui/sidebar';
-import { logout } from '@/lib/auth-client';
+  SidebarFooter, SidebarTrigger} from '@/components/ui/sidebar';
 import * as React from 'react';
 import type { SVGProps } from 'react';
 import { cn } from '@/lib/utils';
@@ -33,6 +29,7 @@ import { AstralLogo } from '@/components/icons/astral-logo';
 import { Skeleton } from '@/components/ui/skeleton';
 
 import { HomeIcon } from '@/components/icons/nav/home-icon';
+
 import { MarketIcon } from '@/components/icons/nav/market-icon';
 import { DepositIcon } from '@/components/icons/nav/deposit-icon';
 import { WithdrawIcon } from '@/components/icons/nav/withdraw-icon';
@@ -68,7 +65,7 @@ import { AvatarUploadDialog } from '@/components/dashboard/profile-view';
 import { RightSidebar } from '@/components/ui/right-sidebar';
 import { SideNavigation } from '@/components/ui/side-navigation';
 import { ModeToggle } from '@/components/ui/mode-toggle';
-import { ThemeSwitcher } from '@/components/ui/theme-switcher';
+import { ThemeSwitcher } from '@/components/ui/theme-switcher'
 
 type IconComponent = (props: SVGProps<SVGSVGElement>) => JSX.Element;
 
@@ -350,19 +347,16 @@ URL=${window.location.origin}`;
     router.push('/');
   };
 
-  const userEmail = user?.email;
-  const userInitial = userEmail ? userEmail.charAt(0).toUpperCase() : 'U';
-
   const bottomNavItems = [
     { href: '/dashboard', label: 'Home', icon: HomeIcon },
     { href: '/dashboard/support', label: 'Support', icon: SupportIcon },
     { href: '/dashboard/trading', label: 'CORE', icon: AstralLogo },
     { href: '/dashboard/withdraw', label: 'Withdraw', icon: WithdrawIcon },
     { href: '/dashboard/profile', label: 'Profile', icon: ProfileIcon },
-  ];
+];
 
-  const getPageTitle = () => {
-    const currentPath = pathname;
+const getPageTitle = React.useCallback(() => {
+    const currentPath = pathname || '/dashboard'; // Handle initial null pathname
     const simplePath = currentPath.startsWith('/dashboard') ? currentPath : `/dashboard${currentPath}`;
 
     if (simplePath === '/dashboard/trading') return 'Astral Core Trading';
@@ -374,7 +368,7 @@ URL=${window.location.origin}`;
       ? currentItem.label
       : simplePath.split('/').pop()?.replace('-', ' ') || 'Home';
   };
-
+  }, [pathname, menuConfig]);
   const isClient = typeof window !== 'undefined';
   
   const totalBalance = wallet?.balances?.usdt ?? 0;
@@ -383,6 +377,9 @@ URL=${window.location.origin}`;
   const tier = getCurrentTier(totalBalance, tierSettings);
   const TierIcon = tier ? tierIcons[tier.id] : null;
   const tierClassName = tier ? tierClassNames[tier.id] : null;
+
+  const userEmail = user?.email;
+  const userInitial = userEmail ? userEmail.charAt(0).toUpperCase() : 'U';
   const userCountry = countries.find(c => c.name === wallet?.profile?.country);
 
   if (isInitializing) {

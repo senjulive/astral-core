@@ -24,6 +24,13 @@ export async function GET(request: Request) {
       );
     }
 
+    if (!tokenResult.user || !tokenResult.user.id) {
+ return NextResponse.json(
+ { error: 'Invalid token payload' },
+ { status: 401 }
+ );
+    }
+
     const user = await getUserById(tokenResult.user.id);
     
     if (!user) {
@@ -33,8 +40,15 @@ export async function GET(request: Request) {
       );
     }
 
-    // Remove sensitive data
-    const { password, verificationCode, resetPasswordCode, ...userProfile } = user;
+    // Construct user profile with safe-to-share data
+    const userProfile = {
+      id: user.id,
+      email: user.email,
+      fullName: user.fullName,
+      phoneNumber: user.phoneNumber,
+      country: user.country,
+      isVerified: user.isVerified,
+    };
 
     return NextResponse.json({
       success: true,
@@ -71,7 +85,14 @@ export async function PUT(request: Request) {
       );
     }
 
-    const body = await request.json();
+    if (!tokenResult.user || !tokenResult.user.id) {
+ return NextResponse.json(
+ { error: 'Invalid token payload' },
+ { status: 401 }
+ );
+    }
+
+    const body: { fullName?: string, phoneNumber?: string, country?: string } = await request.json();
     const { fullName, phoneNumber, country } = body;
 
     const updates: any = {};
@@ -88,8 +109,15 @@ export async function PUT(request: Request) {
       );
     }
 
-    // Remove sensitive data
-    const { password, verificationCode, resetPasswordCode, ...userProfile } = result.user;
+    // Construct user profile with safe-to-share data
+    const userProfile = {
+      id: result.user.id,
+      email: result.user.email,
+      fullName: result.user.fullName,
+      phoneNumber: result.user.phoneNumber,
+      country: result.user.country,
+      isVerified: result.user.isVerified,
+    };
 
     return NextResponse.json({
       success: true,

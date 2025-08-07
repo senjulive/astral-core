@@ -8,10 +8,14 @@ export const loginSchema = z.object({
 });
 
 export const registerSchema = z.object({
-  fullName: z.string()
-    .min(2, "Full name must be at least 2 characters")
-    .max(50, "Full name must be less than 50 characters")
-    .regex(/^[a-zA-Z\s]+$/, "Full name can only contain letters and spaces"),
+  username: z.string()
+ .min(3, "Username must be at least 3 characters")
+ .max(20, "Username must be less than 20 characters")
+ .regex(/^[a-zA-Z0-9_]+$/, "Username can only contain letters, numbers, and underscores"),
+  // Keeping fullName for potential future use or if it's needed elsewhere, but
+  // the form uses 'username'. If fullName is truly not needed, it can be removed.
+  fullName: z.string().optional(), // Made optional as username is the primary field used in the form
+
   email: z.string()
     .email("Please enter a valid email address")
     .max(100, "Email must be less than 100 characters"),
@@ -21,10 +25,10 @@ export const registerSchema = z.object({
     .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])?/, "Password must contain at least one uppercase letter, one lowercase letter, and one number"),
   confirmPassword: z.string(),
   country: z.string().min(1, "Please select your country"),
-  phoneNumber: z.string()
-    .min(8, "Phone number must be at least 8 digits")
-    .max(20, "Phone number must be less than 20 digits")
-    .regex(/^\+?[\d\s\-\(\)]+$/, "Please enter a valid phone number")
+  contactNumber: z.string() // Changed from phoneNumber to contactNumber
+    .min(5, "Contact number must be at least 5 digits") // Adjusted minimum length based on profileUpdateSchema
+    // .max(20, "Contact number must be less than 20 digits") // Removed max length for flexibility with country codes
+    .regex(/^\\+?\\d+$/, "Contact number can only contain digits and an optional leading plus sign") // Adjusted regex to allow leading + and only digits
     .optional(),
   referralCode: z.string().optional(),
   agreeToTerms: z.boolean().refine(val => val === true, {

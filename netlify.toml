@@ -1,3 +1,4 @@
+continue  
 [build]
   command = "npm run build"
   publish = ".next"
@@ -132,8 +133,7 @@
   node_bundler = "esbuild"
   
 # Edge functions
-[edge_functions]
-
+[[edge_functions]]
 # Development settings
 [dev]
   command = "npm run dev"

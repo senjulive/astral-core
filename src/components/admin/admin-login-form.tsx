@@ -22,7 +22,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { useToast } from "@/hooks/use-toast";
+import { useToast, type Toast } from "@/hooks/use-toast";
 import { clientLogin as login } from "@/lib/auth-client";
 
 const adminLoginSchema = z.object({
@@ -35,7 +35,7 @@ type AdminLoginFormValues = z.infer<typeof adminLoginSchema>;
 const MOCK_ADMIN_EMAIL = "admin@astralcore.io";
 
 export function AdminLoginForm({ onLoginSuccess }: { onLoginSuccess: (email: string) => void }) {
-  const { toast } = useToast();
+  const { toast }: { toast: (props: Toast) => void } = useToast();
   const [isLoading, setIsLoading] = React.useState(false);
 
   const form = useForm<AdminLoginFormValues>({
